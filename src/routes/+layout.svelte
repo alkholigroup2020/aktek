@@ -2,7 +2,7 @@
 	import '../app.postcss';
 	import { onMount } from 'svelte';
 	import { t, locale, locales } from '$lib/i18n/translator';
-
+	import { pageDirection } from '$lib/stores/index';
 	// set the theme to light all the time
 	import { setModeCurrent } from '@skeletonlabs/skeleton';
 	onMount(async () => {
@@ -19,4 +19,6 @@
 	<title>{$t('tab.title')}</title>
 </svelte:head>
 
-<slot />
+<div dir={$pageDirection}>
+	<slot />
+</div>

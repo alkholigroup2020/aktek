@@ -2,6 +2,7 @@ import { derived, writable, get } from 'svelte/store';
 import translations from './index';
 import { localStorageStore } from '@skeletonlabs/skeleton';
 import type { Writable } from 'svelte/store';
+import { currentAppLang } from '../stores/index';
 
 // Define Types
 type TranslationsType = typeof translations;
@@ -22,6 +23,8 @@ export const locale = writable<LocaleType>(initialLocale);
 // When the locale changes, save it in localStorage
 locale.subscribe((value) => {
 	userPreferredLocal.set(value);
+	// update the app language store value
+	currentAppLang.set(value);
 });
 
 export const locales = Object.keys(translations) as LocaleType[];
