@@ -1,15 +1,12 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script type="ts">
+	import LocaleSwitcher from '$lib/LocaleSwitcher.svelte';
+	import { t, locale, locales } from '$lib/i18n/translator';
+</script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
+<div>
+	<div class=" px-2 py-12">
+		<LocaleSwitcher />
 	</div>
+
+	<div class="h1 px-5 py-8">{$t('tab.title')}</div>
 </div>
