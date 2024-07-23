@@ -3,6 +3,8 @@
 	import { onMount } from 'svelte';
 	import { t, locale, locales } from '$lib/i18n/translator';
 	import WindowSize from '$lib/WindowSize.svelte';
+	import { navigating } from '$app/stores';
+	import LoadingSpinner from '$lib/LoadingSpinner.svelte';
 	import { pageDirection } from '$lib/stores/index';
 	// set the theme to light all the time
 	import { setModeCurrent } from '@skeletonlabs/skeleton';
@@ -24,6 +26,10 @@
 	<WindowSize />
 {/if}
 
-<div dir={$pageDirection}>
-	<slot />
-</div>
+{#if $navigating}
+	<LoadingSpinner />
+{:else}
+	<div dir={$pageDirection}>
+		<slot />
+	</div>
+{/if}
