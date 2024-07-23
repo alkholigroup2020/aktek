@@ -22,8 +22,7 @@
 		</div>
 		<div>
 			<p class="text-base {$currentAppLang === 'en' ? 'en-common' : 'ar-common'}">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perspiciatis odio
-				accusamus ullam a labore qui vero explicabo voluptate cupiditate!
+				Lorem ipsum dolor sit amet!
 			</p>
 		</div>
 	</div>
