@@ -22,6 +22,7 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
+	import DrawerLinks from '$lib/DrawerLinks.svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
@@ -29,7 +30,9 @@
 	<title>{$t('tab.title')}</title>
 </svelte:head>
 
-<Drawer />
+<Drawer>
+	<DrawerLinks />
+</Drawer>
 
 {#if devOrProduction}
 	<WindowSize />
