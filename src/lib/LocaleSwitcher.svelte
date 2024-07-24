@@ -5,7 +5,7 @@
 
 <!-- language switcher -->
 <button
-	class="btn !bg-transparent px-3 min-[400px]:px-5"
+	class="btn !bg-transparent p-0"
 	on:click={() => {
 		if ($locale === 'en') {
 			$locale = 'ar';
@@ -15,8 +15,9 @@
 	}}
 >
 	<span
-		class="text-xs lg:text-sm 2xl:text-base max-lg:hidden {$currentAppLang === 'en'
-			? 'ar-common'
-			: 'en-common'}">{$locale === 'en' ? 'العــربية' : 'English'}</span
+		class="max-lg:hidden {$currentAppLang === 'en'
+			? 'ar-common text-lg lg:text-xl 2xl:text-3xl'
+			: 'en-common text-base lg:text-lg 2xl:text-2xl'}"
+		>{$locale === 'en' ? 'العــربية' : 'English'}</span
 	>
 </button>

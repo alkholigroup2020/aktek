@@ -2,9 +2,12 @@
 	import LocaleSwitcher from '$lib/LocaleSwitcher.svelte';
 	import { currentAppLang } from '$lib/stores';
 	import { t, locale, locales } from '$lib/i18n/translator';
+	import HeroSection from '$lib/home-page/Hero-Section.svelte';
 </script>
 
-<div>
+<HeroSection />
+
+<!-- <div>
 	<div class=" px-2 py-12">
 		<LocaleSwitcher />
 	</div>
@@ -26,4 +29,4 @@
 			</p>
 		</div>
 	</div>
-</section>
+</section> -->

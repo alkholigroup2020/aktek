@@ -1,3 +1,4 @@
 export default {
-	'tab.title': 'SBTMC'
+	'tab.title': 'AKTEK',
+	'nav.title': 'AKTEK'
 };

@@ -1,3 +1,4 @@
 export default {
-	'tab.title': 'فن المعمار'
+	'tab.title': 'AKTEK',
+	'nav.title': 'AKTEK'
 };

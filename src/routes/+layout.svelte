@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { t, locale, locales } from '$lib/i18n/translator';
 	import WindowSize from '$lib/WindowSize.svelte';
+	import MainNav from '$lib/MainNav.svelte';
 	import { navigating } from '$app/stores';
 	import LoadingSpinner from '$lib/LoadingSpinner.svelte';
 	import { pageDirection } from '$lib/stores/index';
@@ -29,7 +30,11 @@
 {#if $navigating}
 	<LoadingSpinner />
 {:else}
-	<div dir={$pageDirection}>
+	<div dir={$pageDirection} class="max-w-[1920px] mx-auto">
+		<div class="absolute z-20 w-[100%] min-[1920px]:max-w-[1920px] mx-auto">
+			<MainNav />
+		</div>
+
 		<slot />
 	</div>
 {/if}
