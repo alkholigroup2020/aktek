@@ -1,4 +1,5 @@
-import { derived, writable, get } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
+// import { get } from 'svelte/store';
 import translations from './index';
 import { localStorageStore } from '@skeletonlabs/skeleton';
 import type { Writable } from 'svelte/store';
@@ -14,11 +15,14 @@ type VarsType = { [key: string]: string };
 const userPreferredLocal: Writable<string> = localStorageStore('preferredLocal', '');
 
 // Get the locale from localStorage, or default to the browser's language, or 'en'
-const initialLocale = (get(userPreferredLocal) ||
-	(typeof navigator !== 'undefined' ? navigator.language.split('-')[0] : undefined) ||
-	'en') as LocaleType;
+// const initialLocale = (get(userPreferredLocal) ||
+// 	(typeof navigator !== 'undefined' ? navigator.language.split('-')[0] : undefined) ||
+// 	'en') as LocaleType;
 
-export const locale = writable<LocaleType>(initialLocale);
+// export const locale = writable<LocaleType>(initialLocale);
+
+// set the website language to en only
+export const locale = writable<LocaleType>('en');
 
 // When the locale changes, save it in localStorage
 locale.subscribe((value) => {

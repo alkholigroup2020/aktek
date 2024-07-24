@@ -22,9 +22,9 @@
 			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">About Us</li>
 			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">Services</li>
 			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">Contact Us</li>
-			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">
+			<!-- <li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">
 				<LocaleSwitcher />
-			</li>
+			</li> -->
 		</ul>
 	</svelte:fragment>
 </AppBar>
