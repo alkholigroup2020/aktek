@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/translator';
-	import { AppBar } from '@skeletonlabs/skeleton';
+	import { AppBar, AppRailAnchor } from '@skeletonlabs/skeleton';
 	import LocaleSwitcher from './LocaleSwitcher.svelte';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
@@ -54,13 +54,40 @@
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
 		<!-- links -->
-		<ul class="flex text-white text-base lg:text-lg 2xl:text-2xl max-md:hidden">
-			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">
-				<span>Home</span>
+		<ul class="flex text-white max-md:hidden">
+			<li>
+				<AppRailAnchor href="/" title="about-us">
+					<span
+						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
+						>{$t('nav.home')}</span
+					>
+				</AppRailAnchor>
 			</li>
-			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">About Us</li>
-			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">Services</li>
-			<li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">Contact Us</li>
+			<li>
+				<AppRailAnchor href="/about-us" title="about-us">
+					<span
+						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
+						>{$t('nav.about')}</span
+					>
+				</AppRailAnchor>
+			</li>
+			<li>
+				<AppRailAnchor href="/services" title="about-us">
+					<span
+						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
+						>{$t('nav.services')}</span
+					>
+				</AppRailAnchor>
+			</li>
+			<li>
+				<AppRailAnchor href="/contact-us" title="about-us">
+					<span
+						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
+						>{$t('nav.contact')}</span
+					>
+				</AppRailAnchor>
+			</li>
+
 			<!-- <li class="flex items-center mx-5 xl:mx-7 2xl:mx-10">
 				<LocaleSwitcher />
 			</li> -->
