@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <section class="relative z-10">
 	<div>
 		<img

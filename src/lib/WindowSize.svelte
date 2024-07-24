@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
+	import LocaleSwitcher from './LocaleSwitcher.svelte';
 	// Define the breakpoints as specified in your Tailwind CSS configuration
 	const breakpoints: any = {
 		xs: 0,
@@ -27,9 +28,13 @@
 </script>
 
 <div
-	class="fixed bottom-1 left-1 bg-opacity-80 bg-blue-800 text-white text-center p-5 rounded-full z-[999] h-fit w-fit"
+	class="fixed bottom-3 left-3 bg-opacity-80 bg-blue-800 text-white text-center p-5 rounded-3xl z-[999] h-fit w-fit"
 >
 	<p class="text-xl">W: {dimensions.width}px</p>
 	<p class="text-xl">H: {dimensions.height}px</p>
 	<p class="text-3xl">{currentBreakpoint}</p>
+	<hr />
+	<div class="py-2">
+		<LocaleSwitcher />
+	</div>
 </div>

@@ -15,9 +15,9 @@
 	}}
 >
 	<span
-		class="max-lg:hidden {$currentAppLang === 'en'
+		class={$currentAppLang === 'en'
 			? 'ar-common text-lg lg:text-xl 2xl:text-3xl'
-			: 'en-common text-base lg:text-lg 2xl:text-2xl'}"
+			: 'en-common text-base lg:text-lg 2xl:text-2xl'}
 		>{$locale === 'en' ? 'العــربية' : 'English'}</span
 	>
 </button>

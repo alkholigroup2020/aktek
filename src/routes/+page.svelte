@@ -1,5 +1,4 @@
 <script type="ts">
-	import LocaleSwitcher from '$lib/LocaleSwitcher.svelte';
 	import { currentAppLang } from '$lib/stores';
 	import { t, locale, locales } from '$lib/i18n/translator';
 	import HeroSection from '$lib/home-page/Hero-Section.svelte';

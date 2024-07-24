@@ -13,6 +13,12 @@
 		setModeCurrent(true);
 	});
 	$: devOrProduction = process.env.NODE_ENV === 'development' ? true : false;
+
+	// import { Drawer, getDrawerStore } from '@skeletonlabs/skeleton';
+	// import type { DrawerSettings, DrawerStore } from '@skeletonlabs/skeleton';
+	import { initializeStores, Drawer } from '@skeletonlabs/skeleton';
+	initializeStores();
+
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
@@ -23,6 +29,8 @@
 	<title>{$t('tab.title')}</title>
 </svelte:head>
 
+<Drawer />
+
 {#if devOrProduction}
 	<WindowSize />
 {/if}
@@ -30,6 +38,7 @@
 {#if $navigating}
 	<LoadingSpinner />
 {:else}
+	<!-- <AppShell>...</AppShell> -->
 	<div dir={$pageDirection} class="max-w-[1920px] mx-auto">
 		<div class="absolute z-20 w-[100%] min-[1920px]:max-w-[1920px] mx-auto">
 			<MainNav />
