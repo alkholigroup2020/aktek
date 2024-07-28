@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/translator';
+	import { currentAppLang } from '$lib/stores';
 	import { AppRailAnchor } from '@skeletonlabs/skeleton';
 </script>
 
@@ -11,12 +12,16 @@
 			srcset="/pictures/home/hero_800x640.webp 640w, 	 
         /pictures/home/hero_1200x720.webp 1024w, 
         /pictures/home/hero_1600x800.webp 1536w, 
-        /pictures/home/hero_2000x900.webp 9000w"
-			class="w-full aspect-[1/0.8] md:aspect-[1/0.6] lg:aspect-[1/0.5] 2xl:aspect-[1/0.45]"
+        /pictures/home/hero_2000x1000.webp 9000w"
+			class="w-full aspect-[1/0.8] md:aspect-[1/0.6] lg:aspect-[1/0.5]"
 		/>
 	</div>
 	<div class="flex max-md:justify-center">
-		<div class="absolute max-md:-bottom-32 md:-bottom-20 md:right-0">
+		<div
+			class="absolute max-md:-bottom-32 md:-bottom-20 {$currentAppLang === 'en'
+				? 'md:right-0'
+				: 'md:left-0'}"
+		>
 			<div
 				class="w-[250px] min-[450px]:w-[300px] min-[550px]:w-[350px] sm:w-[400px] xl:w-[500px] 2xl:w-[550px] min-[1750px]:w-[650px]
 				h-[200px] md:h-[220px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px] min-[1750px]:h-[400px] bg-primary-500 max-md:text-center
@@ -27,17 +32,20 @@
 					min-[550px]:leading-10 sm:leading-normal lg:leading-tight xl:leading-relaxed 2xl:leading-relaxed
 					-mt-[1.625rem] min-[450px]:-mt-12 min-[550px]:-mt-10 sm:-mt-12 md:-mt-[1.625rem] lg:-mt-10 xl:-mt-[1.625rem] min-[1750px]:-mt-2"
 				>
-					Saudi’s First MEP Prefabricator
+					{$t('home.mainTitle')}
 				</p>
 				<div class="mt-3 xl:mt-[1.625rem]">
 					<button type="button" class="btn text-white border rounded-sm p-3 xl:p-4">
 						<AppRailAnchor href="/services" title="about-us">
 							<div class="flex items-center text-base lg:text-lg 2xl:text-2xl font-extralight">
-								<span class="text-sm sm:text-base xl:text-xl">View Services</span>
+								<span class="text-sm sm:text-base xl:text-xl">{$t('home.services')}</span>
 								<!-- arrow icon -->
 								<span class="mx-1 sm:mx-2">
 									<svg
-										class="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 mx-1 xl:mx-3"
+										class="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 mx-1 xl:mx-3 {$currentAppLang ===
+										'ar'
+											? 'rotate-180'
+											: ''}"
 										viewBox="0 -6.5 36 36"
 										version="1.1"
 										xmlns="http://www.w3.org/2000/svg"
