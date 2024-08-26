@@ -230,10 +230,43 @@
 		</div>
 	</div>
 	<!-- page content -->
-	<div class="xl:col-span-2 lg:py-40">
-		<div class="h-[1200px] bg-pink-300" id="first" bind:this={sections[0]}></div>
-		<div class="h-[1200px] bg-purple-300" id="second" bind:this={sections[1]}></div>
-		<div class="h-[1200px] bg-pink-400" id="third" bind:this={sections[2]}></div>
-		<div class="h-[1200px] bg-purple-500" id="fourth" bind:this={sections[3]}></div>
+	<div class="xl:col-span-2">
+		<div
+			class="mt-44 md:mt-5 lg:mt-8 xl:mt-24 px-3 sm:px-8 xl:p-12"
+			id="first"
+			bind:this={sections[0]}
+		>
+			<div class="space-y-5 xl:space-y-8">
+				<!-- question -->
+				<div>
+					<p class="text-xl sm:text-2xl lg:text-3xl text-primary-700 font-bold">
+						{$t('home.about.question')}
+					</p>
+				</div>
+				<!-- title -->
+				<div>
+					<p class="text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold">
+						{$t('home.about.title')}
+					</p>
+				</div>
+				<!-- paragraph -->
+				<div class="md:w-2/3 xl:w-4/5 2xl:w-3/5">
+					<p class="text-base sm:text-lg lg:text-xl text-justify">{$t('home.about.paragraph')}</p>
+				</div>
+				<!-- image -->
+				<div class="md:w-2/3 xl:w-4/5 2xl:w-3/5">
+					<img
+						src="/pictures/home/who-we-are_800x480.webp"
+						srcset="/pictures/home/who-we-are_600x360.webp 768w, 
+										/pictures/home/who-we-are_800x480.webp 2000w"
+						alt="a factory from inside"
+						class="w-full aspect-[1/0.6]"
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="h-[1200px]" id="second" bind:this={sections[1]}></div>
+		<div class="h-[1200px]" id="third" bind:this={sections[2]}></div>
+		<div class="h-[1200px]" id="fourth" bind:this={sections[3]}></div>
 	</div>
 </div>
