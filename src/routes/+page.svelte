@@ -40,6 +40,12 @@
 	onMount(() => {
 		setupObserver();
 	});
+
+	let activeSlide: string = '01';
+
+	function handleDivClick(number: string) {
+		activeSlide = number;
+	}
 </script>
 
 <HeroSection />
@@ -270,7 +276,7 @@
 	</div>
 </div>
 
-<div id="second" bind:this={sections[1]}>
+<div id="second" class="my-5 lg:my-8" bind:this={sections[1]}>
 	<div class="grid xl:grid-cols-3 py-12">
 		<!-- image -->
 		<div class="xl:col-span-1 max-xl:order-2">
@@ -343,8 +349,100 @@
 			</div>
 		</div>
 	</div>
+	<div class="grid lg:grid-cols-2 mx-3 sm:mx-5 2xl:mx-0 mt-5 lg:mt-8">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div
+			class="flex flex-col rounded-none snap-start p-5 sm:p-8 md:p-12 h-fit card shadow-none cursor-pointer text-center {activeSlide ===
+			'01'
+				? 'right-shadow z-10 bg-secondary-300'
+				: ''}"
+			on:click={() => {
+				handleDivClick('01');
+			}}
+		>
+			<div class="space-y-5 lg:space-y-12">
+				<div class="text-large font-semibold py-2 flex justify-center space-x-5 align-middle">
+					<div>
+						<img
+							src="/pictures/home/safety_50x50.webp"
+							alt="safety icon"
+							class="w-9 lg:w-full aspect-[1/1]"
+						/>
+					</div>
+					<div>
+						<p class="text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold">
+							{$t('home.safety.title')}
+						</p>
+					</div>
+				</div>
+				{#if activeSlide === '01'}
+					<div>
+						<p class="text-sm sm:text-base lg:text-lg font-extralight xl:px-5 2xl:px-16">
+							{$t('home.safety.paragraph')}
+						</p>
+					</div>
+				{/if}
+			</div>
+		</div>
+
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div
+			class="flex flex-col rounded-none snap-start p-5 sm:p-8 md:p-12 h-fit card shadow-none cursor-pointer text-center {activeSlide ===
+			'02'
+				? 'left-shadow bg-secondary-300'
+				: ''}"
+			on:click={() => {
+				handleDivClick('02');
+			}}
+		>
+			<div class="space-y-5 lg:space-y-12">
+				<div class="font-semibold py-2 flex justify-center space-x-5 align-middle">
+					<div>
+						<img
+							src="/pictures/home/quality_50x50.webp"
+							alt="quality icon"
+							class="w-9 lg:w-full aspect-[1/1]"
+						/>
+					</div>
+					<div>
+						<p class="text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold">
+							{$t('home.quality.title')}
+						</p>
+					</div>
+				</div>
+				{#if activeSlide === '02'}
+					<div class="space-y-3 lg:space-y-4">
+						<p class="text-sm sm:text-base lg:text-lg font-extralight xl:px-5 2xl:px-16">
+							{$t('home.quality.paragraph1')}
+						</p>
+						<p class="text-sm sm:text-base lg:text-lg font-extralight xl:px-5 2xl:px-16">
+							{$t('home.quality.paragraph2')}
+						</p>
+						<ul class="text-sm sm:text-base lg:text-lg font-extralight xl:px-5 2xl:px-16">
+							<li>{$t('home.quality.li1')}</li>
+							<li>{$t('home.quality.li2')}</li>
+							<li>{$t('home.quality.li3')}</li>
+						</ul>
+					</div>
+				{/if}
+			</div>
+		</div>
+	</div>
 </div>
 
-<div class="h-[1200px]" id="third" bind:this={sections[2]}></div>
+<div id="third" bind:this={sections[2]}></div>
 
 <div class="h-[1200px]" id="fourth" bind:this={sections[3]}></div>
+
+<style>
+	@media screen and (min-width: 1024px) {
+		.right-shadow {
+			box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.2); /* Customize the shadow as needed */
+		}
+		.left-shadow {
+			box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.2); /* Customize the shadow as needed */
+		}
+	}
+</style>
