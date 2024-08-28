@@ -29,5 +29,13 @@ export default {
 		'Regular training and induction shall be carried out in, but not limited to the following areas, as and when required:',
 	'home.quality.li1': 'Site Induction.',
 	'home.quality.li2': 'Quality Plan, Company Procedure (Office and Site).',
-	'home.quality.li3': 'Environment, Health and Safety.'
+	'home.quality.li3': 'Environment, Health and Safety.',
+	'home.vision.title': 'Project Vision',
+	'home.vision.paragraph1':
+		'Project Description: An MEP Prefabrication initiative to identify, localize, and commercialize a vital construction services manufacturing entity suited to large volume mass production and deployment across the Kingdom of Saudi Arabia.',
+
+	'home.vision.paragraph2': '“What is this New Technology”',
+	'home.vision.paragraph3':
+		'The manufacture of MEP modules takes the normal traditional site construction processes and replaces them with highly structured and scientifically engineered factory-controlled tasks and processes that result in a guaranteed successful outcome during project execution. MEP Prefabrication uses 3D BIM technology to breakdown the MEP Systems within a building into a suitable clusters of services packaged within a structural frame made of galvanized 40 x 40 Steele angle, usually 6m long. The individual modules are delivered to site, installed to the building structure and each module is connotes to the adjacent module. The result is quicker, less expensive, better quality and with much less labour.',
+	'home.vision.details': 'View Details'
 };
