@@ -6,6 +6,7 @@
 	import { activeSection } from '$lib/stores';
 	import FeaturesSection from '$lib/home-page/Features-Section.svelte';
 	import ProjectVision from '$lib/home-page/Project-Vision.svelte';
+	import SubsidiariesSection from '$lib/home-page/Subsidiaries-Section.svelte';
 
 	let sections: HTMLElement[] = [];
 
@@ -254,7 +255,9 @@
 				</div>
 				<!-- paragraph -->
 				<div>
-					<p class="text-base sm:text-lg lg:text-xl text-justify">{$t('home.about.paragraph')}</p>
+					<p class="text-base sm:text-lg lg:text-xl text-justify">
+						{$t('home.subsidiaries.title')}
+					</p>
 				</div>
 				<!-- image -->
 				<div class="md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
@@ -275,8 +278,10 @@
 	<FeaturesSection />
 </div>
 
-<div class="h-[1200px]" id="third" bind:this={sections[2]}>
+<div id="third" bind:this={sections[2]}>
 	<ProjectVision />
 </div>
 
-<div class="h-[1200px]" id="fourth" bind:this={sections[3]}></div>
+<div id="fourth" bind:this={sections[3]}>
+	<SubsidiariesSection />
+</div>

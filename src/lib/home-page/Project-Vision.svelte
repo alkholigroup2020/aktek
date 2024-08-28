@@ -4,14 +4,14 @@
 	import { currentAppLang } from '$lib/stores';
 </script>
 
-<div class="grid xl:grid-cols-3 py-10 px-3 sm:px-5">
+<div class="grid xl:grid-cols-3 py-10 xl:py-16 px-3 sm:px-5">
 	<!-- image -->
 	<div class="xl:col-span-1 max-xl:order-2 mt-5 lg:mt-8 xl:mt-0">
 		<div class="w-full md:w-2/3 lg:w-3/5 xl:w-[95%]">
 			<img
-				src="/pictures/home/vision.png"
-				srcset="/pictures/home/vision.png 590w, 
-                /pictures/home/vision.png 2000w"
+				src="/pictures/home/vision_600x420.webp"
+				srcset="/pictures/home/vision_800x480.webp 1280w, 
+                /pictures/home/vision_600x420.webp 2000w"
 				alt="a product sample"
 				class="w-full aspect-[1/0.6] xl:aspect-[1/0.7]"
 			/>
