@@ -48,7 +48,7 @@
 
 <div class="xl:grid xl:grid-cols-3">
 	<!-- page links -->
-	<div class="mt-32 md:mt-24 xl:mt-12 px-4 xl:px-0 max-md:hidden">
+	<div class="mt-32 md:mt-24 xl:mt-12 px-4 xl:px-0 max-md:hidden overflow-auto">
 		<div class="max-xl:flex xl:sticky xl:top-8">
 			<!-- About Us link -->
 			<div class="mx-1 xl:mx-0 my-8 w-fit xl:w-full 2xl:w-[90%]">

@@ -23,6 +23,7 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import DrawerLinks from '$lib/DrawerLinks.svelte';
+	import MainFooter from '$lib/MainFooter.svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
@@ -48,5 +49,10 @@
 		</div>
 
 		<slot />
+
+		<!-- footer -->
+		<div>
+			<MainFooter />
+		</div>
 	</div>
 {/if}

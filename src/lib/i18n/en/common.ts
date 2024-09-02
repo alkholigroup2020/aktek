@@ -38,5 +38,10 @@ export default {
 	'home.vision.paragraph3':
 		'The manufacture of MEP modules takes the normal traditional site construction processes and replaces them with highly structured and scientifically engineered factory-controlled tasks and processes that result in a guaranteed successful outcome during project execution. MEP Prefabrication uses 3D BIM technology to breakdown the MEP Systems within a building into a suitable clusters of services packaged within a structural frame made of galvanized 40 x 40 Steele angle, usually 6m long. The individual modules are delivered to site, installed to the building structure and each module is connotes to the adjacent module. The result is quicker, less expensive, better quality and with much less labour.',
 	'home.vision.details': 'View Details',
-	'home.subsidiaries.title': 'ALKHOLI Group Subsidiaries'
+	'home.subsidiaries.title': 'ALKHOLI Group Subsidiaries',
+	'footer.about': 'About Us',
+	'footer.careers': 'Careers',
+	'footer.contact': 'Contact Us',
+	'footer.privacy': 'Privacy Policy',
+	'footer.terms': 'Terms of Use'
 };

@@ -4,9 +4,11 @@
 	import { currentAppLang } from '$lib/stores';
 </script>
 
-<div class="my-16 mb-44">
+<div class="my-16 mb-12 px-3 sm:px-5">
 	<!-- title -->
-	<div class="text-center text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold mb-16">
+	<div
+		class="text-center text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold mb-8 md:mb-16"
+	>
 		<p>{$t('home.subsidiaries.title')}</p>
 	</div>
 
