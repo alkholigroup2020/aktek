@@ -13,7 +13,7 @@
 </div>
 
 <div class="flex">
-	<div class="hidden md:block md:w-1/4 bg-primary-500">
+	<div class="hidden md:block md:w-1/4 bg-primary-600">
 		<div class="h-full flex flex-col justify-center items-center">
 			<div class="flex justify-center">
 				<img

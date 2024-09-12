@@ -8,6 +8,10 @@
 	import ProjectVision from '$lib/home-page/Project-Vision.svelte';
 	import SubsidiariesSection from '$lib/home-page/Subsidiaries-Section.svelte';
 
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	gsap.registerPlugin(ScrollTrigger);
+
 	let sections: HTMLElement[] = [];
 
 	// Function to set up the Intersection Observer
@@ -41,6 +45,29 @@
 
 	onMount(() => {
 		setupObserver();
+
+		// animation
+		const fadeBlocks = document.querySelectorAll('.fade-block');
+		fadeBlocks.forEach((block) => {
+			gsap.fromTo(
+				block,
+				{
+					opacity: 1
+				},
+				{
+					opacity: 0,
+					delay: gsap.utils.random(0, 0.8, 0.1), // Random delay for each block
+					duration: 0.5,
+					ease: 'power2.inOut',
+					scrollTrigger: {
+						trigger: block,
+						start: 'top 90%',
+						end: 'bottom top',
+						toggleActions: 'play none none none'
+					}
+				}
+			);
+		});
 	});
 </script>
 
@@ -57,7 +84,7 @@
 					on:click|preventDefault={() => scrollToSection(0)}
 					class="btn w-full shadow-xl rounded-none {$currentAppLang === 'en'
 						? 'text-left'
-						: 'text-right'} {$activeSection === 'first' ? 'bg-primary-500' : 'bg-secondary-500'}"
+						: 'text-right'} {$activeSection === 'first' ? 'bg-primary-600' : 'bg-secondary-500'}"
 				>
 					<span class="flex-grow py-3 text-white text-base sm:text-xl xl:text-2xl"
 						>{$t('home.nav.about')}</span
@@ -102,7 +129,7 @@
 					on:click|preventDefault={() => scrollToSection(1)}
 					class="btn w-full shadow-xl rounded-none {$currentAppLang === 'en'
 						? 'text-left'
-						: 'text-right'} {$activeSection === 'second' ? 'bg-primary-500' : 'bg-secondary-500'}"
+						: 'text-right'} {$activeSection === 'second' ? 'bg-primary-600' : 'bg-secondary-500'}"
 				>
 					<span class="flex-auto py-3 text-white text-base sm:text-xl xl:text-2xl"
 						>{$t('home.nav.product')}</span
@@ -147,7 +174,7 @@
 					on:click|preventDefault={() => scrollToSection(2)}
 					class="btn w-full shadow-xl rounded-none {$currentAppLang === 'en'
 						? 'text-left'
-						: 'text-right'} {$activeSection === 'third' ? 'bg-primary-500' : 'bg-secondary-500'}"
+						: 'text-right'} {$activeSection === 'third' ? 'bg-primary-600' : 'bg-secondary-500'}"
 				>
 					<span class="flex-auto py-3 text-white text-base sm:text-xl xl:text-2xl"
 						>{$t('home.nav.management')}</span
@@ -192,7 +219,7 @@
 					on:click|preventDefault={() => scrollToSection(3)}
 					class="btn w-full shadow-xl rounded-none {$currentAppLang === 'en'
 						? 'text-left'
-						: 'text-right'} {$activeSection === 'fourth' ? 'bg-primary-500' : 'bg-secondary-500'}"
+						: 'text-right'} {$activeSection === 'fourth' ? 'bg-primary-600' : 'bg-secondary-500'}"
 				>
 					<span class="flex-auto py-3 text-white text-base sm:text-xl xl:text-2xl"
 						>{$t('home.nav.subsidiaries')}</span
@@ -256,11 +283,28 @@
 				<!-- paragraph -->
 				<div>
 					<p class="text-base sm:text-lg lg:text-xl text-justify">
-						{$t('home.subsidiaries.title')}
+						{$t('home.about.paragraph')}
 					</p>
 				</div>
+
 				<!-- image -->
-				<div class="md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
+				<div class="relative container md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
+					<img
+						src="/pictures/home/who-we-are_800x480.webp"
+						srcset="/pictures/home/who-we-are_600x360.webp 590w, 
+									/pictures/home/who-we-are_800x480.webp 2000w"
+						alt="a factory from inside"
+						class="w-full aspect-[1/0.6]"
+					/>
+					<!-- Overlay grid -->
+					<div class="grid-overlay absolute inset-0">
+						{#each Array(200) as _, i (i)}
+							<div class="fade-block" style="opacity: 0;"></div>
+						{/each}
+					</div>
+				</div>
+
+				<!-- <div class="md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
 					<img
 						src="/pictures/home/who-we-are_800x480.webp"
 						srcset="/pictures/home/who-we-are_600x360.webp 590w, 
@@ -268,13 +312,13 @@
 						alt="a factory from inside"
 						class="w-full aspect-[1/0.6]"
 					/>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
 </div>
 
-<div id="second" class="my-5 lg:my-8" bind:this={sections[1]}>
+<div id="second" class="mb-5 lg:mb-8" bind:this={sections[1]}>
 	<FeaturesSection />
 </div>
 
@@ -285,3 +329,20 @@
 <div id="fourth" bind:this={sections[3]}>
 	<SubsidiariesSection />
 </div>
+
+<style>
+	.grid-overlay {
+		display: grid;
+		/* Adjust the number of columns based on your preference */
+		grid-template-columns: repeat(20, 1fr);
+		/* Adjust the number of rows based on your preference */
+		grid-template-rows: repeat(10, 1fr);
+		height: 100%;
+	}
+	.fade-block {
+		background-color: #e4e4e4;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0s ease-in-out;
+	}
+</style>

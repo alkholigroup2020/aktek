@@ -5,7 +5,7 @@
 <div class="h-[100vh] w-[100vw] flex items-center justify-center bg-surface-50-900-token">
 	<!-- <div class="animate-spin rounded-full h-32 w-32 border-b-8 border-surface-900-50-token" /> -->
 	<!-- <ProgressRadial stroke={100} meter="stroke-primary-500" track="stroke-primary-500/30" /> -->
-	<ProgressRadial meter="stroke-primary-500" track="stroke-primary-500/30" value={undefined} />
+	<ProgressRadial meter="stroke-primary-600" track="stroke-primary-600/30" value={undefined} />
 
 	<!-- <svg
 		version="1.1"

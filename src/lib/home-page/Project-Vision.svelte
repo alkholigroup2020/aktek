@@ -2,12 +2,58 @@
 	import { t, locale, locales } from '$lib/i18n/translator';
 	import { AppRailAnchor } from '@skeletonlabs/skeleton';
 	import { currentAppLang } from '$lib/stores';
+	import { onMount } from 'svelte';
+
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	gsap.registerPlugin(ScrollTrigger);
+
+	onMount(() => {
+		// animation
+		const fadeBlocks = document.querySelectorAll('.fade-block');
+		fadeBlocks.forEach((block) => {
+			gsap.fromTo(
+				block,
+				{
+					opacity: 1
+				},
+				{
+					opacity: 0,
+					delay: gsap.utils.random(0, 0.8, 0.1), // Random delay for each block
+					duration: 0.5,
+					ease: 'power2.inOut',
+					scrollTrigger: {
+						trigger: block,
+						start: 'top 90%',
+						end: 'bottom top',
+						toggleActions: 'play none none none'
+					}
+				}
+			);
+		});
+	});
 </script>
 
-<div class="grid xl:grid-cols-3 py-10 xl:py-16 px-3 sm:px-5">
+<div class="grid xl:grid-cols-3 py-10 xl:py-16 2xl:py-20 px-3 sm:px-5">
 	<!-- image -->
 	<div class="xl:col-span-1 max-xl:order-2 mt-5 lg:mt-8 xl:mt-0">
-		<div class="w-full md:w-2/3 lg:w-3/5 xl:w-[95%]">
+		<div class="relative container w-full md:w-2/3 lg:w-3/5 xl:w-[95%]">
+			<img
+				src="/pictures/home/vision_600x420.webp"
+				srcset="/pictures/home/vision_800x480.webp 1280w, 
+							/pictures/home/vision_600x420.webp 2000w"
+				alt="a product sample"
+				class="w-full aspect-[1/0.6] xl:aspect-[1/0.7]"
+			/>
+			<!-- Overlay grid -->
+			<div class="grid-overlay absolute inset-0">
+				{#each Array(200) as _, i (i)}
+					<div class="fade-block" style="opacity: 0;"></div>
+				{/each}
+			</div>
+		</div>
+
+		<!-- <div class="w-full md:w-2/3 lg:w-3/5 xl:w-[95%]">
 			<img
 				src="/pictures/home/vision_600x420.webp"
 				srcset="/pictures/home/vision_800x480.webp 1280w, 
@@ -15,7 +61,7 @@
 				alt="a product sample"
 				class="w-full aspect-[1/0.6] xl:aspect-[1/0.7]"
 			/>
-		</div>
+		</div> -->
 	</div>
 	<!-- text -->
 	<div class="xl:col-span-2 space-y-5 lg:space-y-8 xl:px-8 2xl:px-12">
@@ -36,9 +82,9 @@
 			<p class="text-base sm:text-lg lg:text-xl text-justify">{$t('home.vision.paragraph3')}</p>
 		</div>
 		<!-- button -->
-		<div>
-			<button type="button" class="btn border border-primary-700 rounded-sm p-3 xl:p-4">
-				<AppRailAnchor href="/services" title="about-us">
+		<div class="flex">
+			<AppRailAnchor href="/services" title="about-us">
+				<button type="button" class="btn border border-primary-700 rounded-sm p-3 xl:p-4">
 					<div class="flex items-center text-base lg:text-lg 2xl:text-2xl font-extralight">
 						<span class="text-sm sm:text-base xl:text-xl">{$t('home.vision.details')}</span>
 						<!-- arrow icon -->
@@ -73,8 +119,25 @@
 							</svg>
 						</span>
 					</div>
-				</AppRailAnchor>
-			</button>
+				</button>
+			</AppRailAnchor>
 		</div>
 	</div>
 </div>
+
+<style>
+	.grid-overlay {
+		display: grid;
+		/* Adjust the number of columns based on your preference */
+		grid-template-columns: repeat(20, 1fr);
+		/* Adjust the number of rows based on your preference */
+		grid-template-rows: repeat(10, 1fr);
+		height: 100%;
+	}
+	.fade-block {
+		background-color: #e4e4e4;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0s ease-in-out;
+	}
+</style>

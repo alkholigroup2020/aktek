@@ -24,11 +24,13 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import DrawerLinks from '$lib/DrawerLinks.svelte';
 	import MainFooter from '$lib/MainFooter.svelte';
+	import ScrollToTopButton from '$lib/ScrollToTopButton.svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
 <svelte:head>
 	<title>{$t('tab.title')}</title>
+	<meta name="description" content="AKTEK MEP Company" />
 </svelte:head>
 
 <Drawer>
@@ -43,6 +45,9 @@
 	<LoadingSpinner />
 {:else}
 	<!-- <AppShell>...</AppShell> -->
+
+	<ScrollToTopButton />
+
 	<div dir={$pageDirection} class="max-w-[1920px] mx-auto">
 		<div class="absolute z-20 w-[100%] min-[1920px]:max-w-[1920px] mx-auto">
 			<MainNav />

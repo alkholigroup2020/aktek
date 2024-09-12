@@ -23,20 +23,19 @@
 				: 'md:left-0'}"
 		>
 			<div
-				class="w-[250px] min-[450px]:w-[300px] min-[550px]:w-[350px] sm:w-[400px] xl:w-[500px] 2xl:w-[550px] min-[1750px]:w-[650px]
-				h-[200px] md:h-[220px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px] min-[1750px]:h-[400px] bg-primary-500 max-md:text-center
-				p-12 min-[450px]:p-16 2xl:p-20"
+				class="w-[300px] min-[450px]:w-[320px] min-[550px]:w-[350px] sm:w-[400px] md:w-[450px] xl:w-[500px] 2xl:w-[550px] min-[1750px]:w-[650px]
+				h-[250px] md:h-[250px] lg:h-[280px] xl:h-[300px] 2xl:h-[380px] min-[1750px]:h-[400px] bg-primary-600 p-12 min-[450px]:p-16 2xl:p-20
+				flex flex-col justify-center max-md:items-center space-y-5"
 			>
 				<p
-					class="text-white Poppins-Bold font-extrabold text-xl min-[450px]:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl
-					min-[550px]:leading-10 sm:leading-normal lg:leading-tight xl:leading-relaxed 2xl:leading-relaxed
-					-mt-[1.625rem] min-[450px]:-mt-12 min-[550px]:-mt-10 sm:-mt-12 md:-mt-[1.625rem] lg:-mt-10 xl:-mt-[1.625rem] min-[1750px]:-mt-2"
+					class="text-white Poppins-Bold font-extrabold text-3xl md:text-4xl 2xl:text-5xl
+					min-[550px]:leading-10 sm:leading-normal md:leading-tight xl:leading-relaxed 2xl:leading-relaxed max-md:text-center"
 				>
 					{$t('home.mainTitle')}
 				</p>
-				<div class="mt-3 xl:mt-[1.625rem]">
-					<button type="button" class="btn text-white border rounded-sm p-3 xl:p-4">
-						<AppRailAnchor href="/services" title="about-us">
+				<div class="xl:mt-[1.625rem] flex">
+					<AppRailAnchor href="/services" title="about-us">
+						<button type="button" class="btn text-white border rounded-sm p-3 xl:p-4">
 							<div class="flex items-center text-base lg:text-lg 2xl:text-2xl font-extralight">
 								<span class="text-sm sm:text-base xl:text-xl">{$t('home.services')}</span>
 								<!-- arrow icon -->
@@ -72,8 +71,8 @@
 									</svg>
 								</span>
 							</div>
-						</AppRailAnchor>
-					</button>
+						</button>
+					</AppRailAnchor>
 				</div>
 			</div>
 		</div>
