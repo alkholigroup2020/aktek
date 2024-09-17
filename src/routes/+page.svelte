@@ -261,13 +261,24 @@
 				</div>
 
 				<!-- image -->
-				<div class="md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
+				<!-- <div class="md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
 					<img
 						src="/pictures/home/who-we-are_800x480.webp"
 						srcset="/pictures/home/who-we-are_600x360.webp 590w, 
 										/pictures/home/who-we-are_800x480.webp 2000w"
 						alt="a factory from inside"
 						class="w-full aspect-[1/0.6]"
+					/>
+				</div> -->
+
+				<!-- image -->
+				<div class="md:w-3/4 lg:w-4/5 xl:w-full">
+					<img
+						src="/pictures/home/who-we-are_1200x600.webp"
+						srcset="/pictures/home/who-we-are_800x400.webp 768w, 
+										/pictures/home/who-we-are_1200x600.webp 2000w"
+						alt="a factory from the inside"
+						class="w-full aspect-[1/0.5]"
 					/>
 				</div>
 			</div>
