@@ -8,10 +8,6 @@
 	import ProjectVision from '$lib/home-page/Project-Vision.svelte';
 	import SubsidiariesSection from '$lib/home-page/Subsidiaries-Section.svelte';
 
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	gsap.registerPlugin(ScrollTrigger);
-
 	let sections: HTMLElement[] = [];
 
 	// Function to set up the Intersection Observer
@@ -45,29 +41,6 @@
 
 	onMount(() => {
 		setupObserver();
-
-		// animation
-		const fadeBlocks = document.querySelectorAll('.fade-block');
-		fadeBlocks.forEach((block) => {
-			gsap.fromTo(
-				block,
-				{
-					opacity: 1
-				},
-				{
-					opacity: 0,
-					delay: gsap.utils.random(0, 0.8, 0.1), // Random delay for each block
-					duration: 0.5,
-					ease: 'power2.inOut',
-					scrollTrigger: {
-						trigger: block,
-						start: 'top 90%',
-						end: 'bottom top',
-						toggleActions: 'play none none none'
-					}
-				}
-			);
-		});
 	});
 </script>
 
@@ -288,23 +261,7 @@
 				</div>
 
 				<!-- image -->
-				<div class="relative container md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
-					<img
-						src="/pictures/home/who-we-are_800x480.webp"
-						srcset="/pictures/home/who-we-are_600x360.webp 590w, 
-									/pictures/home/who-we-are_800x480.webp 2000w"
-						alt="a factory from inside"
-						class="w-full aspect-[1/0.6]"
-					/>
-					<!-- Overlay grid -->
-					<div class="grid-overlay absolute inset-0">
-						{#each Array(200) as _, i (i)}
-							<div class="fade-block" style="opacity: 0;"></div>
-						{/each}
-					</div>
-				</div>
-
-				<!-- <div class="md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
+				<div class="md:w-2/3 lg:w-3/5 xl:w-full 2xl:w-3/5">
 					<img
 						src="/pictures/home/who-we-are_800x480.webp"
 						srcset="/pictures/home/who-we-are_600x360.webp 590w, 
@@ -312,7 +269,7 @@
 						alt="a factory from inside"
 						class="w-full aspect-[1/0.6]"
 					/>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -329,20 +286,3 @@
 <div id="fourth" bind:this={sections[3]}>
 	<SubsidiariesSection />
 </div>
-
-<style>
-	.grid-overlay {
-		display: grid;
-		/* Adjust the number of columns based on your preference */
-		grid-template-columns: repeat(20, 1fr);
-		/* Adjust the number of rows based on your preference */
-		grid-template-rows: repeat(10, 1fr);
-		height: 100%;
-	}
-	.fade-block {
-		background-color: #e4e4e4;
-		width: 100%;
-		height: 100%;
-		transition: opacity 0s ease-in-out;
-	}
-</style>

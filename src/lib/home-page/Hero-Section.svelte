@@ -9,7 +9,9 @@
 		<img
 			alt="main hero section background"
 			src="/pictures/home/hero_2000x900.webp"
-			srcset="/pictures/home/hero_800x640.webp 640w, 	 
+			srcset="
+			  /pictures/home/hero_500x400.webp 499w,   
+			  /pictures/home/hero_800x640.webp 640w, 	 
         /pictures/home/hero_1200x720.webp 1024w, 
         /pictures/home/hero_1600x800.webp 1536w, 
         /pictures/home/hero_2000x1000.webp 9000w"
