@@ -4,7 +4,7 @@ export default {
 	'nav.about': 'About Us',
 	'nav.services': 'Services',
 	'nav.contact': 'Contact Us',
-	'home.mainTitle': 'Saudi’s First MEP Prefabricator',
+	'home.mainTitle': 'أول مصنع مسبق الصنع للكهرباء والسباكة في السعودية',
 	'home.services': 'View Services',
 	'home.nav.about': 'About Us',
 	'home.nav.product': 'Product Overview',

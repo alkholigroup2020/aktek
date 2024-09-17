@@ -21,7 +21,7 @@ const userPreferredLocal: Writable<string> = localStorageStore('preferredLocal',
 
 // export const locale = writable<LocaleType>(initialLocale);
 
-// set the website language to en only
+// temp - to set the website language to en only
 export const locale = writable<LocaleType>('en');
 
 // When the locale changes, save it in localStorage
