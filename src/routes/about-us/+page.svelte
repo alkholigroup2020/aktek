@@ -268,8 +268,71 @@
 		</div>
 	</div>
 
-	<div id="second" class="mb-5 lg:mb-8" bind:this={sections[1]}>
-		<!--  -->
+	<div id="second" class="mt-12 mb-10 lg:mb-8" bind:this={sections[1]}>
+		<div class="xl:grid xl:grid-cols-3 bg-black text-white py-12">
+			<div class="max-xl:hidden xl:col-span-1"></div>
+			<div class="xl:col-span-2 px-3 sm:px-8 xl:px-16 2xl:px-24">
+				<!-- vision -->
+				<div
+					class="flex flex-col items-center xl:flex-row xl:justify-around
+					space-y-3 md:space-y-5 2xl:space-y-8 mb-12"
+				>
+					<!-- image -->
+					<div class="w-28 md:w-36 2xl:w-48 2xl:mx-24">
+						<img
+							src="/pictures/about/vision_200x200.webp"
+							srcset="/pictures/about/vision_150x150.webp 768w, 
+											/pictures/about/vision_200x200.webp 2000w"
+							alt="a vision icon"
+							class="w-full aspect-square"
+						/>
+					</div>
+					<!-- text -->
+					<div class="text-center">
+						<!-- title -->
+						<p class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
+							{$t('about.vAndV.visionTitle')}
+						</p>
+						<!-- message -->
+						<p class="text-base sm:text-lg lg:text-xl line-clamp-2">
+							{$t('about.vAndV.visionText1')} <br class="max-md:hidden" />
+							{$t('about.vAndV.visionText2')}
+						</p>
+					</div>
+				</div>
+
+				<!-- values -->
+				<div
+					class="flex flex-col items-center xl:flex-row-reverse xl:justify-around
+					space-y-3 md:space-y-5 2xl:space-y-8"
+				>
+					<!-- image -->
+					<div class="w-28 md:w-36 2xl:w-48">
+						<img
+							src="/pictures/about/values_200x200.webp"
+							srcset="/pictures/about/values_150x150.webp 768w, 
+										/pictures/about/values_200x200.webp 2000w"
+							alt="a values icon"
+							class="w-full aspect-square"
+						/>
+					</div>
+					<!-- text -->
+					<div class="max-xl:text-center">
+						<!-- title -->
+						<p class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
+							{$t('about.vAndV.valuesTitle')}
+						</p>
+						<!-- message -->
+						<ul class="text-base sm:text-lg lg:text-xl space-y-2">
+							<li>{$t('about.vAndV.valuesLi1')}</li>
+							<li>{$t('about.vAndV.valuesLi2')}</li>
+							<li>{$t('about.vAndV.valuesLi3')}</li>
+							<li>{$t('about.vAndV.valuesLi4')}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div id="third" bind:this={sections[2]}>

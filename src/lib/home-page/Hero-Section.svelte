@@ -78,8 +78,7 @@
 			>
 				<p
 					bind:this={textElement}
-					class="text-white Poppins-Bold font-extrabold text-3xl md:text-4xl 2xl:text-5xl
-					h-full
+					class="text-white Poppins-Bold font-extrabold text-3xl md:text-4xl 2xl:text-5xl h-full
 					min-[550px]:leading-10 sm:leading-normal md:leading-tight xl:leading-relaxed 2xl:leading-relaxed max-md:text-center"
 				></p>
 

@@ -57,14 +57,13 @@
 		>
 			<div
 				class="w-[300px] min-[450px]:w-[320px] min-[550px]:w-[350px] sm:w-[400px] md:w-[450px] xl:w-[500px] 2xl:w-[550px] min-[1750px]:w-[650px]
-				h-[250px] md:h-[250px] lg:h-[280px] xl:h-[300px] 2xl:h-[380px] min-[1750px]:h-[400px] bg-primary-600 p-12 min-[450px]:p-16 2xl:p-20
+				h-[260px] sm:h-[270px] md:h-[300px] lg:h-[280px] xl:h-[300px] 2xl:h-[380px] min-[1750px]:h-[400px] bg-primary-600 p-12 min-[450px]:p-16 2xl:p-20
 				flex flex-col justify-center max-md:items-center space-y-5"
 			>
 				<p
 					bind:this={textElement}
-					class="text-white Poppins-Bold font-extrabold text-3xl md:text-4xl 2xl:text-5xl
-					h-full
-					min-[550px]:leading-10 sm:leading-normal md:leading-tight xl:leading-relaxed 2xl:leading-relaxed max-md:text-center"
+					class="text-white Poppins-Bold font-extrabold text-3xl md:text-4xl 2xl:text-5xl h-full
+					min-[380px]:leading-10 min-[470px]:leading-9 sm:leading-9 md:leading-tight xl:leading-relaxed 2xl:leading-[60px] min-[1750px]:leading-[78px]"
 				></p>
 			</div>
 		</div>

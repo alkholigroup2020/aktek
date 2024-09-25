@@ -47,6 +47,16 @@ export default {
 	'about.about.title': 'About AKTEK',
 	'about.about.paragraph':
 		'The Al Kholi Group senior management has the opportunity to develop a complementary business within construction services sector that is suited to large volume has mass production and deployment across the Kingdom of Saudi Arabia. The set-up of an MEP Prefabrication facility would have a number of positive synergies with the Al Kholi Group of companies: - MEP Prefab is highly scalable, profitable stand-alone business - MEP Prefab sits well inside the core interests of the Al Kholi Group The KSA government, through Building Technology Stimulus Initiative (BTSI) is urgently promoting the adoption of the use of modern methods of construction to increase the productivity of the industry in the Kingdom. MEP Prefab sits right in the centre of these initiatives and should benefit by incentives by being provided by BTSI. MEP Prefab is a well-known and proven system of delivery world-wide, and the Al Kholi Group has the unique opportunity to be the first MEP Prefabricator in KSA.',
+
+	'about.vAndV.visionTitle': 'Vision',
+	'about.vAndV.visionText1': 'To excel in the industry through constant',
+	'about.vAndV.visionText2': 'innovation and reinvention.',
+	'about.vAndV.valuesTitle': 'Values',
+	'about.vAndV.valuesLi1': 'Values Inspiration',
+	'about.vAndV.valuesLi2': 'Innovation',
+	'about.vAndV.valuesLi3': 'Sustainability',
+	'about.vAndV.valuesLi4': 'Relationship',
+
 	'footer.about': 'About Us',
 	'footer.careers': 'Careers',
 	'footer.contact': 'Contact Us',
