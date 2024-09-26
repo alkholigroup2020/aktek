@@ -269,7 +269,7 @@
 	</div>
 
 	<div id="second" class="mt-12 mb-10 lg:mb-8" bind:this={sections[1]}>
-		<div class="xl:grid xl:grid-cols-3 bg-black text-white py-12">
+		<div class="xl:grid xl:grid-cols-3 bg-black text-white py-12 xl:py-16">
 			<div class="max-xl:hidden xl:col-span-1"></div>
 			<div class="xl:col-span-2 px-3 sm:px-8 xl:px-16 2xl:px-24">
 				<!-- vision -->
@@ -278,7 +278,7 @@
 					space-y-3 md:space-y-5 2xl:space-y-8 mb-12"
 				>
 					<!-- image -->
-					<div class="w-28 md:w-36 2xl:w-48 2xl:mx-24">
+					<div class="w-28 md:w-36 2xl:w-56 2xl:mx-24">
 						<img
 							src="/pictures/about/vision_200x200.webp"
 							srcset="/pictures/about/vision_150x150.webp 768w, 
@@ -336,7 +336,103 @@
 	</div>
 
 	<div id="third" bind:this={sections[2]}>
-		<!--  -->
+		<div class="xl:grid xl:grid-cols-3 pb-12">
+			<div class="max-xl:hidden xl:col-span-1"></div>
+			<div class="xl:col-span-2 px-3 sm:px-8 xl:px-0">
+				<!-- section title -->
+				<div class="pb-5 lg:py-10 xl:py-12">
+					<p class="text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold">
+						{$t('about.management.title')}
+					</p>
+				</div>
+				<!-- chairman section -->
+				<div class="md:flex">
+					<!-- image -->
+					<div>
+						<div class="w-44 sm:w-56 xl:w-60">
+							<img
+								src="/pictures/about/hamza_250x250.webp"
+								srcset="/pictures/about/hamza_200x200.webp 768px,
+								/pictures/about/hamza_250x250.webp 2000px"
+								alt="the chairman"
+								class="w-full aspect-square"
+							/>
+						</div>
+					</div>
+					<!-- text -->
+					<div
+						class="col-span-2 {$currentAppLang === 'en' ? 'md:pl-5 xl:px-12' : 'md:pr-5 xl:px-12'}"
+					>
+						<!-- name -->
+						<div class="pt-3 md:pt-0">
+							<p class="text-xl sm:text-2xl lg:text-3xl text-primary-700 font-bold">
+								{$t('about.management.chairmanName')}
+							</p>
+						</div>
+						<!-- title -->
+						<div class="md:mt-2">
+							<p class="text-lg sm:text-xl lg:text-2xl font-bold">
+								{$t('about.management.chairmanTitle')}
+							</p>
+						</div>
+						<!-- paragraph -->
+						<div class="space-y-3 pt-3 text-base sm:text-lg lg:text-xl text-justify">
+							<p>
+								{$t('about.management.chairmanP1')}
+							</p>
+							<p>
+								{$t('about.management.chairmanP2')}
+							</p>
+							<p>
+								{$t('about.management.chairmanP3')}
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- GM section -->
+				<div class="md:flex py-8 md:py-12">
+					<!-- image -->
+					<div>
+						<div class="w-44 sm:w-56 xl:w-60">
+							<img
+								src="/pictures/about/ayman_250x250.webp"
+								srcset="/pictures/about/ayman_200x200.webp 768px,
+								/pictures/about/ayman_250x250.webp 2000px"
+								alt="the chairman"
+								class="w-full aspect-square"
+							/>
+						</div>
+					</div>
+					<!-- text -->
+					<div
+						class="col-span-2 {$currentAppLang === 'en' ? 'md:pl-5 xl:px-12' : 'md:pr-5 xl:px-12'}"
+					>
+						<!-- name -->
+						<div class="pt-3 md:pt-0">
+							<p class="text-xl sm:text-2xl lg:text-3xl text-primary-700 font-bold">
+								{$t('about.management.GMName')}
+							</p>
+						</div>
+						<!-- title -->
+						<div class="md:mt-2">
+							<p class="text-lg sm:text-xl lg:text-2xl font-bold">
+								{$t('about.management.GMTitle')}
+							</p>
+						</div>
+						<!-- paragraph -->
+						<div class="space-y-3 pt-3 text-base sm:text-lg lg:text-xl text-justify">
+							<p>
+								{$t('about.management.GMP1')}
+							</p>
+							<p>
+								{$t('about.management.GMP2')}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div id="fourth" bind:this={sections[3]}>

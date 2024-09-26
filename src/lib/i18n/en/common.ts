@@ -57,6 +57,22 @@ export default {
 	'about.vAndV.valuesLi3': 'Sustainability',
 	'about.vAndV.valuesLi4': 'Relationship',
 
+	'about.management.title': 'Management',
+	'about.management.chairmanName': 'Dr. Hamza Al Kholi',
+	'about.management.chairmanTitle': 'Chairman',
+	'about.management.chairmanP1':
+		'A legacy built over half a century, the Al Kholi Group has built its reputation in the Kingdom through means of sustainability, quality work delivered on time, and having experts on our team who diligently support each project. From the very beginning, our core focus has been on convenience of our Customers. Throughout the years, our hard work and commitment have resulted in the Al Kholi Group serving as gateway between Saudi Arabia and our international Partners that has allowed us to continue working towards our long term goals through innovation, clear direction, and meticulous organisation.',
+	'about.management.chairmanP2':
+		'Branching out and setting up subsidiaries that cater to various sectors of Technologies and Healthcare, Construction, Facilities Maintenance, Management Consulting, Energy Retrofit, Elevators and Escalators, and MEP Contracting as well as Pre-Fabrication, we have dedicated ourselves to enhancing the quality of life of our community.',
+	'about.management.chairmanP3':
+		'Our core success factors are our distinguished management, our diversified portfolio of services, products, Partners and Clients as well as our dedication to the goal of creating a sustainable environment for our employees and customers.',
+	'about.management.GMName': 'Ayman Abd Elgabbar',
+	'about.management.GMTitle': 'General Manager MEP',
+	'about.management.GMP1':
+		'A legacy built over half a century, the Al Kholi Group has built its reputation in the Kingdom through means of sustainability, quality work delivered on time, and having experts on our team who diligently support each project. From the very beginning, our core focus has been on convenience of our Customers. Throughout the years, our hard work and commitment have resulted in the Al Kholi Group serving as gateway between Saudi Arabia and our international Partners that has allowed us to continue working towards our long term goals through innovation, clear direction, and meticulous organization.',
+	'about.management.GMP2':
+		'Branching out and setting up subsidiaries that cater to various sectors of Technologies and Healthcare, Construction, Facilities Maintenance, Management Consulting, Energy Retrofit, Elevators and Escalators, and MEP Contracting as well as Pre-Fabrication, we have dedicated ourselves to enhancing the quality of life of our community.',
+
 	'footer.about': 'About Us',
 	'footer.careers': 'Careers',
 	'footer.contact': 'Contact Us',
