@@ -73,6 +73,8 @@ export default {
 	'about.management.GMP2':
 		'Branching out and setting up subsidiaries that cater to various sectors of Technologies and Healthcare, Construction, Facilities Maintenance, Management Consulting, Energy Retrofit, Elevators and Escalators, and MEP Contracting as well as Pre-Fabrication, we have dedicated ourselves to enhancing the quality of life of our community.',
 
+	'about.iso.title': 'Certifications',
+
 	'footer.about': 'About Us',
 	'footer.careers': 'Careers',
 	'footer.contact': 'Contact Us',

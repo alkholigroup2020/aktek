@@ -370,7 +370,7 @@
 							</p>
 						</div>
 						<!-- title -->
-						<div class="md:mt-2">
+						<div class="md:mt-2 xl:py-3">
 							<p class="text-lg sm:text-xl lg:text-2xl font-bold">
 								{$t('about.management.chairmanTitle')}
 							</p>
@@ -415,7 +415,7 @@
 							</p>
 						</div>
 						<!-- title -->
-						<div class="md:mt-2">
+						<div class="md:mt-2 xl:py-3">
 							<p class="text-lg sm:text-xl lg:text-2xl font-bold">
 								{$t('about.management.GMTitle')}
 							</p>
@@ -436,6 +436,52 @@
 	</div>
 
 	<div id="fourth" bind:this={sections[3]}>
-		<!--  -->
+		<div class="xl:grid xl:grid-cols-3 pb-12">
+			<div class="max-xl:hidden xl:col-span-1"></div>
+			<div class="xl:col-span-2 px-3 sm:px-8 xl:px-0">
+				<!-- section title -->
+				<div class="pb-5 lg:py-10 xl:py-12">
+					<p class="text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold">
+						{$t('about.iso.title')}
+					</p>
+				</div>
+
+				<!-- certifications -->
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 gap-8 2xl:gap-x-32 2xl:gap-y-16 {$currentAppLang ===
+					'en'
+						? 'xl:pr-10'
+						: 'xl:pl-10'}"
+				>
+					<div class="w-4/5 min-[380px]:w-2/3 sm:w-full">
+						<img
+							src="/pictures/about/iso1_700x280.webp"
+							srcset="/pictures/about/iso1_400x160.webp 768px,
+							/pictures/about/iso1_700x280.webp 2000px"
+							alt="iso certificate logo"
+							class="w-full aspect-[1/0.4]"
+						/>
+					</div>
+					<div class="w-4/5 min-[380px]:w-2/3 sm:w-full">
+						<img
+							src="/pictures/about/iso2_700x280.webp"
+							srcset="/pictures/about/iso2_400x160.webp 768px,
+							/pictures/about/iso2_700x280.webp 2000px"
+							alt="iso certificate logo"
+							class="w-full aspect-[1/0.4]"
+						/>
+					</div>
+					<div class="w-4/5 min-[380px]:w-2/3 sm:w-full">
+						<img
+							src="/pictures/about/iso3_700x280.webp"
+							srcset="/pictures/about/iso3_400x160.webp 768px,
+							/pictures/about/iso3_700x280.webp 2000px"
+							alt="iso certificate logo"
+							class="w-full aspect-[1/0.4]"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
