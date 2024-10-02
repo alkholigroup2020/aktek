@@ -75,6 +75,28 @@ export default {
 
 	'about.iso.title': 'Certifications',
 
+	'services.nav.overview': 'Product Overview',
+	'services.nav.description': 'Product Description',
+	'services.nav.benefits': 'Benefits & Challenges',
+	'services.nav.vision': 'Project Vision',
+	'services.overview.title': 'Product Overview',
+	'services.overview.li1': 'All Services fully coordinated, factory installed and tested.',
+	'services.overview.li2':
+		'Factory Working up to 24hrs/day, Completed Modules Ready For Delivery Immediately Upon Gaining Site Access.',
+	'services.overview.li3':
+		'Site Installation & Commissioning Takes a Fraction of the Time Needed for Traditional Construction Method.',
+	'services.overview.li4':
+		'MEP Prefabrication is a highly scalable, profitable stand-alone business.',
+	'services.overview.li5':
+		'The business can sell to the open market as well as to a sister MEP company.',
+	'services.overview.li6':
+		'There are positive management synergies between the Elevator & MEP factory.',
+	'services.overview.li7':
+		'MEP Prefabrication sits well inside the core interests of the Al Kholi Group.',
+	'services.overview.li8': 'BTSI are promoting and incentivize this type of business.',
+	'services.overview.li9':
+		'Al Kholi Group have the opportunity to be the first mover in The Kingdom.',
+
 	'footer.about': 'About Us',
 	'footer.careers': 'Careers',
 	'footer.contact': 'Contact Us',
