@@ -28,7 +28,7 @@
 </script>
 
 <div
-	class="fixed top-3 right-3 bg-opacity-80 bg-blue-800 text-white text-center p-5 rounded-3xl z-[999] h-fit w-fit"
+	class="fixed top-3 left-3 bg-opacity-80 bg-blue-800 text-white text-center p-5 rounded-3xl z-[999] h-fit w-fit"
 >
 	<p class="text-xl">W: {dimensions.width}px</p>
 	<p class="text-xl">H: {dimensions.height}px</p>

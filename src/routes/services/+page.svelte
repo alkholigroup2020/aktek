@@ -3,8 +3,11 @@
 	import { currentAppLang } from '$lib/stores';
 	import { t } from '$lib/i18n/translator';
 	import { activeSection } from '$lib/stores';
+	import DimensionTracker from '$lib/DimensionTracker.svelte';
 
 	let sections: HTMLElement[] = [];
+
+	let elemCarousel: HTMLDivElement;
 
 	// Function to set up the Intersection Observer
 	function setupObserver() {
@@ -35,6 +38,10 @@
 		});
 	}
 
+	function carouselThumbnail(index: number) {
+		elemCarousel.scroll(elemCarousel.clientWidth * index, 0);
+	}
+
 	onMount(() => {
 		setupObserver();
 	});
@@ -59,7 +66,6 @@
 
 <!-- Product Overview Section -->
 <section>
-	<!--  -->
 	<div class="xl:grid xl:grid-cols-3">
 		<!-- page links -->
 		<div class="mt-8 xl:mt-12 px-4 xl:px-0 max-md:hidden overflow-auto">
@@ -249,7 +255,7 @@
 
 		<!-- first section -->
 		<div class="xl:col-span-2">
-			<div class="mt-12 md:mt-5 lg:mt-8 px-3 sm:px-8 xl:p-12" id="first" bind:this={sections[0]}>
+			<div id="first" class="mt-12 md:mt-10 px-3 sm:px-8 xl:p-12" bind:this={sections[0]}>
 				<div class="space-y-5 xl:space-y-8">
 					<!-- title -->
 					<div>
@@ -284,10 +290,242 @@
 								class="w-full aspect-[1/0.6]"
 							/>
 						</div>
-						<div class="absolute inset-0 bg-secondary-300 opacity-30" />
+						<div class="absolute inset-0 bg-secondary-300 opacity-30 md:w-3/4 lg:w-4/5 xl:w-full" />
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!-- Product Description Section -->
+<section>
+	<div class="xl:grid xl:grid-cols-3 py-3 md:py-10 xl:py-0">
+		<div class="max-xl:hidden xl:col-span-1"></div>
+
+		<div class="xl:col-span-2">
+			<div id="second" class="mt-12 md:mt-5 lg:mt-8 px-3 sm:px-8 xl:p-12" bind:this={sections[1]}>
+				<div class="space-y-5 xl:space-y-8">
+					<!-- title -->
+					<div class="md:w-3/4">
+						<p class="text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold">
+							<span class="leading-snug">
+								{$t('services.description.title')}
+							</span>
+						</p>
+					</div>
+
+					<!-- the subtitles -->
+					<div>
+						<p class="text-base sm:text-lg lg:text-xl font-bold">
+							{$t('services.description.subTitle1')}
+						</p>
+						<p class="text-base sm:text-lg lg:text-xl">{$t('services.description.subTitle2')}</p>
+					</div>
+
+					<!-- images gallery -->
+					<div>
+						<div>
+							<div class="p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center bg-secondary-100">
+								<!-- Full Images -->
+								<div
+									bind:this={elemCarousel}
+									class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto no-scrollbar"
+								>
+									<img
+										class="snap-center w-full rounded-container-token aspect-[1/0.55]"
+										src="/pictures/services/description_01_1200x660.webp"
+										srcset="/pictures/services/description_01_700x385.webp 768px,
+										/pictures/services/description_01_1200x660.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+									<img
+										class="snap-center w-full rounded-container-token aspect-[1/0.55]"
+										src="/pictures/services/description_02_1200x660.webp"
+										srcset="/pictures/services/description_02_700x385.webp 768px,
+										/pictures/services/description_02_1200x660.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+									<img
+										class="snap-center w-full rounded-container-token aspect-[1/0.55]"
+										src="/pictures/services/description_03_1200x660.webp"
+										srcset="/pictures/services/description_03_700x385.webp 768px,
+										/pictures/services/description_03_1200x660.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+									<img
+										class="snap-center w-full rounded-container-token aspect-[1/0.55]"
+										src="/pictures/services/description_04_1200x660.webp"
+										srcset="/pictures/services/description_04_700x385.webp 768px,
+										/pictures/services/description_04_1200x660.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+									<img
+										class="snap-center w-full rounded-container-token aspect-[1/0.55]"
+										src="/pictures/services/description_05_1200x660.webp"
+										srcset="/pictures/services/description_05_700x385.webp 768px,
+										/pictures/services/description_05_1200x660.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+								</div>
+							</div>
+						</div>
+
+						<hr class="mx-4" />
+
+						<!-- thumbnails -->
+						<div class="py-1">
+							<div class="p-4 grid grid-cols-5 gap-4 bg-secondary-100">
+								<button type="button" on:click={() => carouselThumbnail(0)}>
+									<img
+										class="rounded-container-token border-2 aspect-[1/0.55]"
+										src="/pictures/services/description_01_300x165.webp"
+										srcset="/pictures/services/description_01_200x110.webp 768px,
+										/pictures/services/description_01_300x165.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+								</button>
+								<button type="button" on:click={() => carouselThumbnail(1)}>
+									<img
+										class="rounded-container-token border-2 aspect-[1/0.55]"
+										src="/pictures/services/description_02_300x165.webp"
+										srcset="/pictures/services/description_02_200x110.webp 768px,
+										/pictures/services/description_02_300x165.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+								</button>
+								<button type="button" on:click={() => carouselThumbnail(2)}>
+									<img
+										class="rounded-container-token border-2 aspect-[1/0.55]"
+										src="/pictures/services/description_03_300x165.webp"
+										srcset="/pictures/services/description_03_200x110.webp 768px,
+										/pictures/services/description_03_300x165.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+								</button>
+								<button type="button" on:click={() => carouselThumbnail(3)}>
+									<img
+										class="rounded-container-token border-2 aspect-[1/0.55]"
+										src="/pictures/services/description_04_300x165.webp"
+										srcset="/pictures/services/description_04_200x110.webp 768px,
+										/pictures/services/description_04_300x165.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+								</button>
+								<button type="button" on:click={() => carouselThumbnail(4)}>
+									<img
+										class="rounded-container-token border-2 aspect-[1/0.55]"
+										src="/pictures/services/description_05_300x165.webp"
+										srcset="/pictures/services/description_05_200x110.webp 768px,
+										/pictures/services/description_05_300x165.webp 2000px"
+										alt="MFP part"
+										loading="lazy"
+									/>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Benefits & Challenges Section -->
+<section class="bg-black text-white">
+	<div class="xl:grid xl:grid-cols-3 py-3 md:py-10 xl:py-0">
+		<div class="max-xl:hidden xl:col-span-1"></div>
+
+		<div class="xl:col-span-2">
+			<div id="third" class="mt-12 md:mt-5 lg:mt-8 px-3 sm:px-8 xl:p-12" bind:this={sections[2]}>
+				<div class="space-y-5 xl:space-y-8">
+					<!-- title -->
+					<div class="md:w-3/4">
+						<p class="text-3xl sm:text-4xl lg:text-5xl font-bold">
+							<span class="leading-snug">
+								{$t('services.benefits.title')}
+							</span>
+						</p>
+					</div>
+
+					<!-- first paragraph -->
+					<div class="py-3 md:py-5 xl:py-8 2xl:py-10">
+						<!-- subtitle -->
+						<div>
+							<p class="text-lg sm:text-xl lg:text-2xl text-primary-500">
+								{$t('services.benefits.subTitle1')}
+							</p>
+						</div>
+						<!-- text -->
+						<div class="py-3 md:py-5">
+							<p class="text-base sm:text-lg lg:text-xl">{$t('services.benefits.paragraph1')}</p>
+						</div>
+					</div>
+
+					<!-- second paragraph -->
+					<div class="lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:gap-2 2xl:gap-12">
+						<!-- text -->
+						<div class="xl:col-span-2">
+							<!-- subtitle -->
+							<div>
+								<p class="text-lg sm:text-xl lg:text-2xl text-primary-500">
+									{$t('services.benefits.subTitle2')}
+								</p>
+							</div>
+							<!-- list -->
+							<div class="p-5">
+								<ul class="list-disc text-base sm:text-lg lg:text-xl space-y-5">
+									<li>{$t('services.benefits.li1')}</li>
+									<li>{$t('services.benefits.li2')}</li>
+									<li>{$t('services.benefits.li3')}</li>
+									<li>{$t('services.benefits.li4')}</li>
+									<li>{$t('services.benefits.li5')}</li>
+									<li>{$t('services.benefits.li6')}</li>
+									<li>{$t('services.benefits.li7')}</li>
+									<li>{$t('services.benefits.li8')}</li>
+									<li>{$t('services.benefits.li9')}</li>
+									<li>{$t('services.benefits.li10')}</li>
+									<li>{$t('services.benefits.li11')}</li>
+									<li>{$t('services.benefits.li12')}</li>
+									<li>{$t('services.benefits.li13')}</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- image -->
+						<div class="xl:col-span-3 max-lg:hidden">
+							<img
+								class="w-full aspect-[1/1.1]"
+								src="/pictures/services/benefits_800x880.webp"
+								srcset="/pictures/services/benefits_600x660.webp 1535px,
+								/pictures/services/benefits_800x880.webp 2000px"
+								alt="a few labors walking inside a factory"
+								loading="lazy"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+</style>
