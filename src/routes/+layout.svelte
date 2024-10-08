@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { onMount } from 'svelte';
-	import { t, locale, locales } from '$lib/i18n/translator';
+	import { t } from '$lib/i18n/translator';
+	// import { t, locale, locales } from '$lib/i18n/translator';
 	import WindowSize from '$lib/WindowSize.svelte';
 	import MainNav from '$lib/MainNav.svelte';
 	import { navigating } from '$app/stores';

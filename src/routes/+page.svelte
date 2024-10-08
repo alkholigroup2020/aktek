@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { currentAppLang } from '$lib/stores';
-	import { t, locale, locales } from '$lib/i18n/translator';
+	import { t } from '$lib/i18n/translator';
 	import HeroSection from '$lib/home-page/Hero-Section.svelte';
 	import { activeSection } from '$lib/stores';
 	import FeaturesSection from '$lib/home-page/Features-Section.svelte';

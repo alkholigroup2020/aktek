@@ -117,6 +117,16 @@ export default {
 	'services.benefits.li11': 'Improvements in Health & Safety',
 	'services.benefits.li12': 'Quicker and more efficient installation',
 	'services.benefits.li13': 'Reduced materials wastage',
+	'services.vision.title': 'Project Vision',
+	'services.vision.paragraph1':
+		'An MEP Prefabrication initiative to identify, localize, and commercialize a vital construction services manufacturing entity suited to large volume mass production and deployment across the Kingdom of Saudi Arabia.',
+	'services.vision.subtitle1': 'What is this New Technology?',
+	'services.vision.paragraph2':
+		'The manufacture of MEP modules takes the normal traditional site construction processes and replaces them with highly structured and scientifically engineered factory-controlled tasks and processes that result in a guaranteed successful outcome during project execution. MEP Prefabrication uses 3D BIM technology to breakdown the MEP Systems within a building into a suitable clusters of services packaged within a structural frame made of galvanized 40 x 40 Steele angle, usually 6m long. The individual modules are delivered to site, installed to the building structure and each module is connotes to the adjacent module. The result is quicker, less expensive, better quality and with much less labour.',
+	'services.vision.paragraph3':
+		'The Kingdom of Saudi Arabia has a demand backlog of approximately 1,500,000 new homes, schools, hotels, and with many more needed to achieve the Saudi 2030 Vision. Traditional construction cannot meet client expectations.',
+	'services.vision.subtitle2':
+		'“MEP Systems Delivered Factory Complete, Speeding Up Project Completion & Productivity”',
 
 	'footer.about': 'About Us',
 	'footer.careers': 'Careers',

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import LocaleSwitcher from './LocaleSwitcher.svelte';
 	// Define the breakpoints as specified in your Tailwind CSS configuration
 	const breakpoints: any = {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { AppRailAnchor } from '@skeletonlabs/skeleton';
-	import { t, locale, locales } from '$lib/i18n/translator';
+	import { t } from '$lib/i18n/translator';
 </script>
 
 <!-- logo on mobile sizes -->

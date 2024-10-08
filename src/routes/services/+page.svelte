@@ -3,7 +3,6 @@
 	import { currentAppLang } from '$lib/stores';
 	import { t } from '$lib/i18n/translator';
 	import { activeSection } from '$lib/stores';
-	import DimensionTracker from '$lib/DimensionTracker.svelte';
 
 	let sections: HTMLElement[] = [];
 
@@ -511,6 +510,72 @@
 								alt="a few labors walking inside a factory"
 								loading="lazy"
 							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Project Vision Section -->
+<section>
+	<div class="xl:grid xl:grid-cols-3 py-3 md:py-10 xl:py-0">
+		<div class="max-xl:hidden xl:col-span-1"></div>
+
+		<div class="xl:col-span-2">
+			<div id="fourth" class="mt-12 md:mt-5 lg:mt-8 px-3 sm:px-8 xl:p-12" bind:this={sections[3]}>
+				<div>
+					<!-- title -->
+					<div>
+						<p class="text-3xl sm:text-4xl lg:text-5xl text-secondary-700 font-bold">
+							<span class="leading-snug">
+								{$t('services.vision.title')}
+							</span>
+						</p>
+					</div>
+
+					<!-- intro paragraph -->
+					<div class="py-3 md:py-5 xl:py-6 2xl:py-8">
+						<p class="text-base sm:text-lg lg:text-xl">{$t('services.vision.paragraph1')}</p>
+					</div>
+
+					<!-- image -->
+					<div class="md:w-3/4 lg:w-4/5 xl:w-full">
+						<img
+							src="/pictures/services/project-vision_1200x540.webp"
+							srcset="/pictures/services/project-vision_800x360.webp 768px,
+							/pictures/services/project-vision_1200x540.webp 2000px"
+							alt="a factory from the inside"
+							class="w-full aspect-[1/0.45]"
+						/>
+					</div>
+
+					<!-- paragraphs -->
+					<div>
+						<!-- first subtitle -->
+						<div class="pt-5 md:pt-8 xl:pt-12 pb-3 md:pb-5 xl:pb-8">
+							<p class="text-xl sm:text-2xl lg:text-3xl text-primary-700 font-bold">
+								<span class="leading-relaxed">{$t('services.vision.subtitle1')}</span>
+							</p>
+						</div>
+						<!-- first paragraph -->
+						<div>
+							<p class="text-base sm:text-lg lg:text-xl">
+								<span class="leading-relaxed">{$t('services.vision.paragraph2')}</span>
+							</p>
+						</div>
+						<!-- second paragraph -->
+						<div class="pt-3 md:pt-5 xl:pt-8">
+							<p class="text-base sm:text-lg lg:text-xl">
+								<span class="leading-relaxed">{$t('services.vision.paragraph3')}</span>
+							</p>
+						</div>
+						<!-- last subtitle -->
+						<div class="py-5 md:py-8 xl:py-12 mb-8 md:mb-1 xl:mb-0">
+							<p class="text-xl sm:text-2xl lg:text-3xl text-primary-700 font-bold">
+								{$t('services.vision.subtitle2')}
+							</p>
 						</div>
 					</div>
 				</div>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/translator';
 	import { currentAppLang } from '$lib/stores';
-	import { AppRailAnchor } from '@skeletonlabs/skeleton';
 	import { afterUpdate } from 'svelte';
 
 	import { gsap } from 'gsap';

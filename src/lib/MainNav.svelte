@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/translator';
 	import { AppBar, AppRailAnchor } from '@skeletonlabs/skeleton';
-	import LocaleSwitcher from './LocaleSwitcher.svelte';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 

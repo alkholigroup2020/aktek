@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t, locale, locales } from '$lib/i18n/translator';
+	import { t } from '$lib/i18n/translator';
 	import { AppRailAnchor } from '@skeletonlabs/skeleton';
 	import { currentAppLang } from '$lib/stores';
 

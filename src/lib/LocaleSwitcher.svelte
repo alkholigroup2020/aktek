@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t, locale, locales } from '$lib/i18n/translator';
+	import { locale } from '$lib/i18n/translator';
 	import { currentAppLang } from '$lib/stores';
 </script>
 
