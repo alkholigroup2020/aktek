@@ -10,14 +10,16 @@
 	import { pageDirection } from '$lib/stores/index';
 	// set the theme to light all the time
 	import { setModeCurrent } from '@skeletonlabs/skeleton';
+
 	onMount(async () => {
 		setModeCurrent(true);
 	});
+
 	$: devOrProduction = process.env.NODE_ENV === 'development' ? true : false;
 
 	// import { Drawer, getDrawerStore } from '@skeletonlabs/skeleton';
 	// import type { DrawerSettings, DrawerStore } from '@skeletonlabs/skeleton';
-	import { initializeStores, Drawer } from '@skeletonlabs/skeleton';
+	import { initializeStores, Drawer, Toast } from '@skeletonlabs/skeleton';
 	initializeStores();
 
 	// Floating UI for Popups
@@ -33,6 +35,8 @@
 	<title>{$t('tab.title')}</title>
 	<meta name="description" content="AKTEK MEP Company" />
 </svelte:head>
+
+<Toast position="t" />
 
 <Drawer>
 	<DrawerLinks />

@@ -128,6 +128,17 @@ export default {
 	'services.vision.subtitle2':
 		'“MEP Systems Delivered Factory Complete, Speeding Up Project Completion & Productivity”',
 
+	'contact.query.title': 'GOT A Query?',
+	'contact.query.message':
+		'Let us know your requirements and our team is available to help you any time!',
+	'contact.query.errors.isRequires': 'This field is required!',
+	'contact.query.errors.nameTooShort': 'Name is too short!',
+	'contact.query.errors.nameTooLong': 'Name is too long!',
+	'contact.query.errors.nameContent': 'Only English and Arabic alphabets are allowed!',
+	'contact.query.errors.validEmail': 'Please enter a valid email address!',
+	'contact.query.errors.mobileError': 'Please enter a valid mobile number!',
+	'contact.query.errors.messageTooLong': 'The message is too long!',
+
 	'footer.about': 'About Us',
 	'footer.careers': 'Careers',
 	'footer.contact': 'Contact Us',

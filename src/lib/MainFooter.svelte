@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { AppRailAnchor } from '@skeletonlabs/skeleton';
 	import { t } from '$lib/i18n/translator';
+
+	import { page } from '$app/stores';
+
+	const footerBackgroundColor = $page.route.id === '/contact-us' ? 'bg-black' : 'bg-surface-50';
 </script>
 
 <!-- logo on mobile sizes -->
@@ -29,7 +33,8 @@
 	</div>
 
 	<div class="bg-black w-full md:w-3/4">
-		<div class="hidden md:block w-full h-10 lg:h-16 bg-surface-50"></div>
+		<!-- // -->
+		<div class="hidden md:block w-full h-10 lg:h-16 {footerBackgroundColor} "></div>
 
 		<div
 			class="grid gap-1 min-[420px]:gap-3 min-[480px]:gap-5 min-[550px]:gap-8 md:gap-12 lg:gap-10
