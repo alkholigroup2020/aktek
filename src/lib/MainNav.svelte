@@ -55,7 +55,7 @@
 		<!-- links -->
 		<ul class="flex text-white max-md:hidden">
 			<li>
-				<AppRailAnchor href="/" title="about-us">
+				<AppRailAnchor href="/" title="Home">
 					<span
 						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
 						>{$t('nav.home')}</span
@@ -63,7 +63,7 @@
 				</AppRailAnchor>
 			</li>
 			<li>
-				<AppRailAnchor href="/about-us" title="about-us">
+				<AppRailAnchor href="/about-us" title="About-Us">
 					<span
 						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
 						>{$t('nav.about')}</span
@@ -71,7 +71,7 @@
 				</AppRailAnchor>
 			</li>
 			<li>
-				<AppRailAnchor href="/services" title="about-us">
+				<AppRailAnchor href="/services" title="Services">
 					<span
 						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
 						>{$t('nav.services')}</span
@@ -79,7 +79,7 @@
 				</AppRailAnchor>
 			</li>
 			<li>
-				<AppRailAnchor href="/contact-us" title="about-us">
+				<AppRailAnchor href="/contact-us" title="Contact-Us">
 					<span
 						class="flex items-center text-base lg:text-lg 2xl:text-2xl mx-5 xl:mx-7 2xl:mx-10 font-extralight"
 						>{$t('nav.contact')}</span

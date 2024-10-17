@@ -139,6 +139,19 @@ export default {
 	'contact.query.errors.mobileError': 'Please enter a valid mobile number!',
 	'contact.query.errors.messageTooLong': 'The message is too long!',
 
+	'contact.join.title': 'WANT TO JOIN OUR TEAM?',
+
+	'contact.join.attach': 'Please attach a file to proceed.',
+	'contact.join.type': 'File Type is not allowed! Only PDF or Word files.',
+	'contact.join.size': 'File size exceeds the maximum allowed size of 5 MB.',
+
+	'contact.forms.name': 'First Name:',
+	'contact.forms.email': 'Email:',
+	'contact.forms.mobile': 'Mobile:',
+	'contact.forms.message': 'Message:',
+	'contact.forms.attachment': 'Attach Your CV:',
+	'contact.forms.submit': 'Submit',
+
 	'footer.about': 'About Us',
 	'footer.careers': 'Careers',
 	'footer.contact': 'Contact Us',

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { onMount } from 'svelte';
-	import { t } from '$lib/i18n/translator';
+	import { t, locale } from '$lib/i18n/translator';
 	// import { t, locale, locales } from '$lib/i18n/translator';
 	import WindowSize from '$lib/WindowSize.svelte';
 	import MainNav from '$lib/MainNav.svelte';
@@ -13,6 +13,11 @@
 
 	onMount(async () => {
 		setModeCurrent(true);
+
+		// set a cookie to be passed to the server side for messages translations
+		const days = 365; // Expires in one year
+		const expirationDate = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+		document.cookie = `preferredLocale=${$locale}; expires=${expirationDate}; path=/`;
 	});
 
 	$: devOrProduction = process.env.NODE_ENV === 'development' ? true : false;
