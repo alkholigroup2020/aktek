@@ -14,10 +14,10 @@ const schema = object({
 });
 
 const joinUsSchema = object({
-	name: string().required().default('Fawzy'),
-	email: string().email().required().default('fawzy@gmail.com'),
-	mobile: string().required().min(10).max(10).default('0598422677'),
-	textArea: string().required().default('Hello!'),
+	name: string().required(),
+	email: string().email().required(),
+	mobile: string().required().min(10).max(10),
+	textArea: string().required(),
 	employeeCV: mixed()
 });
 

@@ -46,9 +46,15 @@
 				</button>
 			</div>
 			<!-- title -->
-			<div class="w-24 2xl:w-[200px]">
-				<img src="/pictures/logo_278x50.webp" alt="company's logo" class="w-full aspect-[278/50]" />
-			</div>
+			<AppRailAnchor href="/" title="Home">
+				<div class="w-24 2xl:w-[200px]">
+					<img
+						src="/pictures/logo_278x50.webp"
+						alt="company's logo"
+						class="w-full aspect-[278/50]"
+					/>
+				</div>
+			</AppRailAnchor>
 		</div>
 	</svelte:fragment>
 	<svelte:fragment slot="trail">

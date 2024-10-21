@@ -21,7 +21,8 @@
 		<div class="h-full flex flex-col justify-center items-center">
 			<div class="flex justify-center">
 				<img
-					src="/pictures/aktek-white-transparent_180x36.webp"
+					id="the-image"
+					src="/pictures/aktek-logo_180x36.webp"
 					alt="company logo"
 					class="w-3/4 xl:w-full aspect-[1/0.2]"
 				/>
@@ -33,7 +34,6 @@
 	</div>
 
 	<div class="bg-black w-full md:w-3/4">
-		<!-- // -->
 		<div class="hidden md:block w-full h-10 lg:h-16 {footerBackgroundColor} "></div>
 
 		<div

@@ -101,7 +101,7 @@
 						<img
 							src="/pictures/home/safety_50x50.webp"
 							alt="safety icon"
-							class="w-9 lg:w-full aspect-[1/1]"
+							class="w-9 lg:w-full aspect-[1/1] px-1"
 						/>
 					</div>
 					<div>
@@ -137,7 +137,7 @@
 						<img
 							src="/pictures/home/quality_50x50.webp"
 							alt="quality icon"
-							class="w-9 lg:w-full aspect-[1/1]"
+							class="w-9 lg:w-full aspect-[1/1] px-1"
 						/>
 					</div>
 					<div>

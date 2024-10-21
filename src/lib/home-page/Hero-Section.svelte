@@ -65,6 +65,7 @@
 			class="w-full aspect-[1/0.8] md:aspect-[1/0.6] lg:aspect-[1/0.5]"
 		/>
 	</div>
+
 	<div class="flex max-md:justify-center">
 		<div
 			class="absolute max-md:-bottom-32 md:-bottom-20 {$currentAppLang === 'en'
